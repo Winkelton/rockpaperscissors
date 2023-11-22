@@ -77,7 +77,6 @@ function game(){
         } else {
             computerWins +=1;
         }
-        console.log(game);
     }
     if (playerWins > computerWins){
         winner = "Player";
