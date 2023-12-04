@@ -1,0 +1,23 @@
+.startText {
+    padding:0px 6px 0px 0px;
+}
+.results {
+    background-color:lightblue;
+    width:450px;
+    height:100px;
+    text-align: center;
+    display:flex;
+    flex:1;
+    justify-content: center;
+    align-items: center;
+}
+span {
+    padding:0px 6px 0px 0px;
+}
+#results {
+    text-align: center;
+    align-content: center;
+}
+#WinnerAnnouncement {
+    margin-left:150px;
+}
