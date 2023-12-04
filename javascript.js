@@ -84,9 +84,6 @@ buttons.forEach((button) => {
     });
 });
 
-
-
-
 function getComputerChoice(){
     let Choice =  Math.floor(Math.random() * 3);
     if (Choice == 0){
@@ -101,8 +98,6 @@ function getComputerChoice(){
     }
 }
 function playRound(playerSelection){
-// 0 = draw, 1 = player win and 2 = computer win
-
     let Computer = getComputerChoice();
     let winner = 0;
     switch (playerSelection){
@@ -143,10 +138,6 @@ function playRound(playerSelection){
             }
             break;
     }
-  
-    
-   
     return  winner;
-
 }
 
