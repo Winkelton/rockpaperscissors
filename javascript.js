@@ -40,7 +40,7 @@ buttons.forEach((button) => {
             GameRoundsText.textContent = "Game Rounds: "+GameRounds;
             Drawstext.textContent = "Draws: "+Draws;
             playerWinstext.textContent = "Player Wins: "+PlayerWins;
-            } else if(GameRounds === 5) {
+            } else if(GameRounds == 5) {
                 computerWinstext.textContent = "Computer Wins: "+ComputerWins;
                 GameRoundsText.textContent = "Game Rounds: "+GameRounds;
                 Drawstext.textContent = "Draws: "+Draws;
@@ -64,7 +64,7 @@ buttons.forEach((button) => {
             GameRoundsText.textContent = "Game Rounds: "+GameRounds;
             Drawstext.textContent = "Draws: "+Draws;
             playerWinstext.textContent = "Player Wins: "+PlayerWins;
-        } else if (GameRounds === 5) {
+        } else if (GameRounds == 5) {
             computerWinstext.textContent = "Computer Wins: "+ComputerWins;
             GameRoundsText.textContent = "Game Rounds: "+GameRounds;
             Drawstext.textContent = "Draws: "+Draws;
