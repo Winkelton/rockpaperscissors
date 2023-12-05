@@ -31,48 +31,72 @@ buttons.forEach((button) => {
     button.addEventListener('click', (e) => {
     switch(playRound(e.target.id)){
         case "Computer":
-            if(GameRounds <5){
             GameRounds +=1;
             ComputerWins +=1;
+            Draws +=0;
+            PlayerWins +=0;
+            if(GameRounds <=4){
             computerWinstext.textContent = "Computer Wins: "+ComputerWins;
             GameRoundsText.textContent = "Game Rounds: "+GameRounds;
-            } else {
+            Drawstext.textContent = "Draws: "+Draws;
+            playerWinstext.textContent = "Player Wins: "+PlayerWins;
+            } else if(GameRounds === 5) {
                 computerWinstext.textContent = "Computer Wins: "+ComputerWins;
                 GameRoundsText.textContent = "Game Rounds: "+GameRounds;
+                Drawstext.textContent = "Draws: "+Draws;
+                playerWinstext.textContent = "Player Wins: "+PlayerWins;
                 if (ComputerWins > PlayerWins){
                     WinnerAnnouncement.textContent = "The Winner is: Computer";
+                } else if (Draws > PlayerWins) {
+                    WinnerAnnouncement.textContent = "Draw";
                 } else {
                     WinnerAnnouncement.textContent = "The Winner is: Player";
                 }
             }
         break;
         case "Player":
-            if(GameRounds <5){
             GameRounds +=1;
             PlayerWins +=1;
-            playerWinstext.textContent = "Player: "+PlayerWins;
-            GameRoundsText.textContent = "Game Rounds: "+GameRounds;
-        } else {
+            Draws +=0;
+            ComputerWins +=0;
+            if(GameRounds <=4){
             computerWinstext.textContent = "Computer Wins: "+ComputerWins;
             GameRoundsText.textContent = "Game Rounds: "+GameRounds;
+            Drawstext.textContent = "Draws: "+Draws;
+            playerWinstext.textContent = "Player Wins: "+PlayerWins;
+        } else if (GameRounds === 5) {
+            computerWinstext.textContent = "Computer Wins: "+ComputerWins;
+            GameRoundsText.textContent = "Game Rounds: "+GameRounds;
+            Drawstext.textContent = "Draws: "+Draws;
+            playerWinstext.textContent = "Player Wins: "+PlayerWins;
             if (ComputerWins > PlayerWins){
                 WinnerAnnouncement.textContent = "The Winner is: Computer";
+            } else if (Draws > PlayerWins) {
+                WinnerAnnouncement.textContent = "Draw";
             } else {
                 WinnerAnnouncement.textContent = "The Winner is: Player";
             }
         }
         break;
         case "Draw":
-            if(GameRounds <5){
             GameRounds +=1;
             Draws +=1;
-            Drawstext.textContent = "Draws: "+Draws;
+            PlayerWins +=0;
+            ComputerWins +=0;
+            if(GameRounds <=4){
+            computerWinstext.textContent = "Computer Wins: "+ComputerWins;
             GameRoundsText.textContent = "Game Rounds: "+GameRounds;
-        } else {
             Drawstext.textContent = "Draws: "+Draws;
+            playerWinstext.textContent = "Player Wins: "+PlayerWins;
+        } else if(GameRounds == 5) {
+            computerWinstext.textContent = "Computer Wins: "+ComputerWins;
             GameRoundsText.textContent = "Game Rounds: "+GameRounds;
+            Drawstext.textContent = "Draws: "+Draws;
+            playerWinstext.textContent = "Player Wins: "+PlayerWins;
             if (ComputerWins > PlayerWins){
                 WinnerAnnouncement.textContent = "The Winner is: Computer";
+            } else if (Draws > PlayerWins) {
+                WinnerAnnouncement.textContent = "Draw";
             } else {
                 WinnerAnnouncement.textContent = "The Winner is: Player";
             }
@@ -140,4 +164,3 @@ function playRound(playerSelection){
     }
     return  winner;
 }
-
